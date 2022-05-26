@@ -1,4 +1,6 @@
-# coffee-shop
+# Coffee-shop
+
+powered by Vue.js 2.6.x
 
 ## Project setup
 ```
