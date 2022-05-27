@@ -10,8 +10,6 @@ import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   components: {
-    // HeroView,
-    // NavBarComponent,
     FooterComponent
   }
 }
