@@ -104,9 +104,9 @@ import NavBarComponent from '@/components/NavBarComponent.vue'
 import ProductCardComponent from '@/components/ProductCardComponent.vue'
 
 export default {
-  components: {
-    NavBarComponent,
+	components: {
+		NavBarComponent,
 		ProductCardComponent
-  }
+	}
 }
 </script>

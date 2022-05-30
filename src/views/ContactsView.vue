@@ -1,5 +1,5 @@
 <template>
-<main>
+	<main>
 		<div class="banner contactspage-banner">
 			<div class="container">
 				<div class="row">
