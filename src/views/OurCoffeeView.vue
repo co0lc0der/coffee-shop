@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<nav-bar-component />
+						<nav-bar />
 					</div>
 				</div>
 				<header-title />
@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import NavBarComponent from '@/components/NavBarComponent.vue'
+import NavBar from '@/components/NavBar.vue'
 import ProductCard from '@/components/ProductCard.vue'
 import HeaderTitle from '@/components/HeaderTitle.vue'
 
@@ -147,7 +147,7 @@ export default {
 		}
 	},
 	components: {
-		NavBarComponent,
+		NavBar,
 		ProductCard,
 		HeaderTitle
 	}

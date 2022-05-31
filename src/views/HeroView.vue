@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<nav-bar-component />
+						<nav-bar />
 					</div>
 				</div>
 				<div class="row">
@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import NavBarComponent from '@/components/NavBarComponent.vue'
+import NavBar from '@/components/NavBar.vue'
 import ProductCard from '@/components/ProductCard.vue'
 import HeaderTitle from '@/components/HeaderTitle.vue'
 
@@ -106,7 +106,7 @@ export default {
 		}
 	},
 	components: {
-		NavBarComponent,
+		NavBar,
 		ProductCard,
 		HeaderTitle
 	}
