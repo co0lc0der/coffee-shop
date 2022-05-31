@@ -49,19 +49,19 @@
 				<div class="row">
 					<div class="col-lg-10 offset-lg-1">
 						<div class="best__wrapper">
-							<product-card-component
+							<product-card
 								classItem="best__item"
 								:title="products[0].title"
 								:price="products[0].price"
 								:image="products[0].image"
 							/>
-							<product-card-component
+							<product-card
 								classItem="best__item"
 								:title="products[1].title"
 								:price="products[1].price"
 								:image="products[1].image"
 							/>
-							<product-card-component
+							<product-card
 								classItem="best__item"
 								:title="products[2].title"
 								:price="products[2].price"
@@ -77,7 +77,7 @@
 
 <script>
 import NavBarComponent from '@/components/NavBarComponent.vue'
-import ProductCardComponent from '@/components/ProductCardComponent.vue'
+import ProductCard from '@/components/ProductCard.vue'
 import HeaderTitle from '@/components/HeaderTitle.vue'
 
 export default {
@@ -107,7 +107,7 @@ export default {
 	},
 	components: {
 		NavBarComponent,
-		ProductCardComponent,
+		ProductCard,
 		HeaderTitle
 	}
 }
