@@ -7,7 +7,7 @@
 						<nav-bar-component />
 					</div>
 				</div>
-				<h1 class="title-big">For your pleasure</h1>
+				<header-title title="For your pleasure" />
 			</div>
 		</div>
 
@@ -76,6 +76,7 @@
 </template>
 
 <script>
+import HeaderTitle from '@/components/HeaderTitle.vue'
 import NavBarComponent from '@/components/NavBarComponent.vue'
 import ProductCardComponent from '@/components/ProductCardComponent.vue'
 
@@ -130,7 +131,8 @@ export default {
 	},
 	components: {
 		NavBarComponent,
-		ProductCardComponent
+		ProductCardComponent,
+		HeaderTitle
 	}
 }
 </script>
