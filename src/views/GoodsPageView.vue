@@ -37,12 +37,36 @@
 				<div class="row">
 					<div class="col-lg-10 offset-lg-1">
 						<div class="shop__wrapper">
-							<product-card-component />
-							<product-card-component />
-							<product-card-component />
-							<product-card-component />
-							<product-card-component />
-							<product-card-component />
+							<product-card-component
+								:title="products[0].title"
+								:price="products[0].price"
+								:image="products[0].image"
+							/>
+							<product-card-component
+								:title="products[1].title"
+								:price="products[1].price"
+								:image="products[1].image"
+							/>
+							<product-card-component
+								:title="products[2].title"
+								:price="products[2].price"
+								:image="products[2].image"
+							/>
+							<product-card-component
+								:title="products[3].title"
+								:price="products[3].price"
+								:image="products[3].image"
+							/>
+							<product-card-component
+								:title="products[4].title"
+								:price="products[4].price"
+								:image="products[4].image"
+							/>
+							<product-card-component
+								:title="products[5].title"
+								:price="products[5].price"
+								:image="products[5].image"
+							/>
 						</div>
 					</div>
 				</div>
