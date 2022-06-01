@@ -21,28 +21,30 @@
 <script>
 import NavLink from '@/components/NavLink.vue'
 
+import { v4 as uuidv4 } from 'uuid';
+
 export default {
 	data() {
 		return {
 			links: {
 				header: {
-					id: 0,
+					id: uuidv4(),
 					link: '/',
 					icon: 'Logo.svg'
 				},
 				other: [
 					{
-						id: 1,
+						id: uuidv4(),
 						link: '/our-coffee',
 						text: 'Our coffee',
 					},
 					{
-						id: 2,
+						id: uuidv4(),
 						link: '/goods-page',
 						text: 'For your pleasure',
 					},
 					{
-						id: 3,
+						id: uuidv4(),
 						link: '/contacts',
 						text: 'Contact us',
 					},
