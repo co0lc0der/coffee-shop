@@ -55,34 +55,11 @@
 					<div class="col-lg-10 offset-lg-1">
 						<div class="shop__wrapper">
 							<product-card
-								:title="products[0].title"
-								:price="products[0].price"
-								:image="products[0].image"
-							/>
-							<product-card
-								:title="products[1].title"
-								:price="products[1].price"
-								:image="products[1].image"
-							/>
-							<product-card
-								:title="products[2].title"
-								:price="products[2].price"
-								:image="products[2].image"
-							/>
-							<product-card
-								:title="products[3].title"
-								:price="products[3].price"
-								:image="products[3].image"
-							/>
-							<product-card
-								:title="products[4].title"
-								:price="products[4].price"
-								:image="products[4].image"
-							/>
-							<product-card
-								:title="products[5].title"
-								:price="products[5].price"
-								:image="products[5].image"
+								v-for="product in products"
+								:key="product.id"
+								:title="product.title"
+								:price="product.price"
+								:image="product.image"
 							/>
 						</div>
 					</div>
@@ -93,51 +70,53 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue'
-import ProductCard from '@/components/ProductCard.vue'
-import HeaderTitle from '@/components/HeaderTitle.vue'
+import NavBar from '@/components/NavBar'
+import ProductCard from '@/components/ProductCard'
+import HeaderTitle from '@/components/HeaderTitle'
+
+import { v4 as uuidv4 } from 'uuid';
 
 export default {
 	data() {
 		return {
 			products: [
 				{
-					id: 0,
+					id: uuidv4(),
 					image: 'good-1.jpg',
 					title: 'Solimo Coffee Beans 2kg',
 					country: 'Brazil',
 					price: 10.73,
 				},
 				{
-					id: 1,
+					id: uuidv4(),
 					image: 'coffee-2.jpg',
 					title: 'Presto Coffee Beans 1kg',
 					country: 'Brazil',
 					price: 15.99,
 				},
 				{
-					id: 2,
+					id: uuidv4(),
 					image: 'coffee-3.jpg',
 					title: 'AROMISTICO Coffee 1kg',
 					country: 'Brazil',
 					price: 6.99,
 				},
 				{
-					id: 3,
+					id: uuidv4(),
 					image: 'coffee-1.jpg',
 					title: 'Solimo Coffee Beans 3kg',
 					country: 'Brazil',
 					price: 16.73,
 				},
 				{
-					id: 4,
+					id: uuidv4(),
 					image: 'coffee-2.jpg',
 					title: 'Presto Coffee Beans 2kg',
 					country: 'Brazil',
 					price: 12.99,
 				},
 				{
-					id: 5,
+					id: uuidv4(),
 					image: 'coffee-3.jpg',
 					title: 'AROMISTICO Coffee 2kg',
 					country: 'Brazil',

@@ -50,22 +50,12 @@
 					<div class="col-lg-10 offset-lg-1">
 						<div class="best__wrapper">
 							<product-card
+								v-for="product in products"
+								:key="product.id"
+								:title="product.title"
+								:price="product.price"
+								:image="product.image"
 								classItem="best__item"
-								:title="products[0].title"
-								:price="products[0].price"
-								:image="products[0].image"
-							/>
-							<product-card
-								classItem="best__item"
-								:title="products[1].title"
-								:price="products[1].price"
-								:image="products[1].image"
-							/>
-							<product-card
-								classItem="best__item"
-								:title="products[2].title"
-								:price="products[2].price"
-								:image="products[2].image"
 							/>
 						</div>
 					</div>
@@ -76,28 +66,30 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue'
-import ProductCard from '@/components/ProductCard.vue'
-import HeaderTitle from '@/components/HeaderTitle.vue'
+import NavBar from '@/components/NavBar'
+import ProductCard from '@/components/ProductCard'
+import HeaderTitle from '@/components/HeaderTitle'
+
+import { v4 as uuidv4 } from 'uuid';
 
 export default {
 	data() {
 		return {
 			products: [
 				{
-					id: 0,
+					id: uuidv4(),
 					image: 'coffee-1.jpg',
 					title: 'Solimo Coffee Beans 2kg',
 					price: 10.73,
 				},
 				{
-					id: 1,
+					id: uuidv4(),
 					image: 'coffee-2.jpg',
 					title: 'Presto Coffee Beans 1kg',
 					price: 15.99,
 				},
 				{
-					id: 2,
+					id: uuidv4(),
 					image: 'coffee-3.jpg',
 					title: 'AROMISTICO Coffee 1kg',
 					price: 6.99,

@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue'
-import HeaderTitle from '@/components/HeaderTitle.vue'
+import NavBar from '@/components/NavBar'
+import HeaderTitle from '@/components/HeaderTitle'
 
 export default {
 	components: {

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import NavLink from '@/components/NavLink.vue'
+import NavLink from '@/components/NavLink'
 
 import { v4 as uuidv4 } from 'uuid';
 
