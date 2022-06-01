@@ -4,25 +4,19 @@
 			<div class="row">
 				<div class="col-lg-6 offset-lg-3">
 					<ul class="footer d-flex flex-wrap">
-						<li class="footer__item">
-							<router-link :to="links[0].link">
-								<img :src="require(`@/assets/logo/${links[0].icon}`)" :alt="links[0].icon">
-							</router-link>
-						</li>
+						<nav-link :link="links.footer.link" classItem="footer__item">
+							<img
+								:src="require(`@/assets/logo/${links.footer.icon}`)"
+								:alt="links.footer.icon"
+							/>
+						</nav-link>
+
 						<nav-link
+							v-for="link in links.other"
+							:key="link.id"
+							:link="link.link"
+							:text="link.text"
 							classItem="footer__item"
-							:link="links[1].link"
-							:text="links[1].text"
-						/>
-						<nav-link
-							classItem="footer__item"
-							:link="links[2].link"
-							:text="links[2].text"
-						/>
-						<nav-link
-							classItem="footer__item"
-							:link="links[3].link"
-							:text="links[3].text"
 						/>
 					</ul>
 				</div>
@@ -35,31 +29,35 @@
 <script>
 import NavLink from '@/components/NavLink.vue'
 
+import { v4 as uuidv4 } from 'uuid';
+
 export default {
 	data() {
 		return {
-			links: [
-				{
-					id: 0,
+			links: {
+				footer: {
+					id: uuidv4(),
 					link: '/',
 					icon: 'Logo_black.svg'
 				},
-				{
-					id: 1,
-					link: '/our-coffee',
-					text: 'Our coffee',
-				},
-				{
-					id: 2,
-					link: '/goods-page',
-					text: 'For your pleasure',
-				},
-				{
-					id: 3,
-					link: '/contacts',
-					text: 'Contact us',
-				},
-			]
+				other: [
+					{
+						id: uuidv4(),
+						link: '/our-coffee',
+						text: 'Our coffee',
+					},
+					{
+						id: uuidv4(),
+						link: '/goods-page',
+						text: 'For your pleasure',
+					},
+					{
+						id: uuidv4(),
+						link: '/contacts',
+						text: 'Contact us',
+					},
+				]
+			}
 		}
 	},
 	components: {
