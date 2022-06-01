@@ -44,9 +44,11 @@
 								Or filter
 							</div>
 							<div class="shop__filter-group">
-								<button class="shop__filter-btn">Brazil</button>
-								<button class="shop__filter-btn">Kenya</button>
-								<button class="shop__filter-btn">Columbia</button>
+								<filter-button
+									v-for="country in countries"
+									:key="country.id"
+									:text="country.country"
+								/>
 							</div>
 						</div>
 					</div>
@@ -73,6 +75,7 @@
 import NavBar from '@/components/NavBar'
 import ProductCard from '@/components/ProductCard'
 import HeaderTitle from '@/components/HeaderTitle'
+import FilterButton from '@/components/FilterButton'
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -122,13 +125,28 @@ export default {
 					country: 'Brazil',
 					price: 9.99,
 				},
+			],
+			countries: [
+				{
+					id: uuidv4(),
+					country: 'Columbia',
+				},
+				{
+					id: uuidv4(),
+					country: 'Brazil',
+				},
+				{
+					id: uuidv4(),
+					country: 'Kenya',
+				},
 			]
 		}
 	},
 	components: {
 		NavBar,
 		ProductCard,
-		HeaderTitle
+		HeaderTitle,
+		FilterButton
 	}
 }
 </script>
