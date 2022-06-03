@@ -11,7 +11,8 @@
     "seamless-scroll-polyfill": "^2.1.8",
     "uuid": "^8.3.2",
     "vue": "^2.6.14",
-    "vue-router": "^3.5.4"
+    "vue-router": "^3.5.4",
+    "vuex": "3.4.*"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

@@ -21,39 +21,14 @@
 <script>
 import NavLink from '@/components/NavLink'
 
-import { v4 as uuidv4 } from 'uuid';
-
 export default {
-	data() {
-		return {
-			links: {
-				header: {
-					id: uuidv4(),
-					link: '/',
-					icon: 'Logo.svg'
-				},
-				other: [
-					{
-						id: uuidv4(),
-						link: '/our-coffee',
-						text: 'Our coffee',
-					},
-					{
-						id: uuidv4(),
-						link: '/goods-page',
-						text: 'For your pleasure',
-					},
-					{
-						id: uuidv4(),
-						link: '/contacts',
-						text: 'Contact us',
-					},
-				]
-			}
-		}
-	},
 	components: {
 		NavLink
 	},
+	computed: {
+		links() {
+			return this.$store.getters["getHeaderLinks"]
+		}
+	}
 }
 </script>
